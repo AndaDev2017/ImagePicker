@@ -63,6 +63,7 @@ public class ImageCropActivity extends ImagePickerBaseActivity {
         mCropView = findView(R.id.cv_crop);
         addClick(R.id.btn_crop_cancel);
         addClick(R.id.btn_crop_confirm);
+        addClick(R.id.btn_crop_rotate);
     }
 
     @Override
@@ -101,6 +102,8 @@ public class ImageCropActivity extends ImagePickerBaseActivity {
             finish();
         } else if (id == R.id.btn_crop_confirm) {
             returnCropedImage();
+        } else if (id == R.id.btn_crop_rotate) {
+            rotateImage();
         }
     }
 
@@ -128,6 +131,11 @@ public class ImageCropActivity extends ImagePickerBaseActivity {
                 }
             }
         }).start();
+    }
+
+    //顺时针旋转图片
+    private void rotateImage() {
+        mCropView.rotate(this);
     }
 
     private void showDialog() {

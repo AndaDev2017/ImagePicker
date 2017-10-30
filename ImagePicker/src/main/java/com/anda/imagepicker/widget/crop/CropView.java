@@ -89,6 +89,7 @@ public class CropView extends ImageView implements ViewTreeObserver.OnGlobalLayo
     private int mOutputX;
     private int mOutputY;
     private int mSampleSize;
+    private int mRotateDegree;
 
     public CropView load(String path) {
         mOriginPath = path;
@@ -116,6 +117,20 @@ public class CropView extends ImageView implements ViewTreeObserver.OnGlobalLayo
                     , CropUtil.getExifRotation(mOriginPath));
             if (rotateBitmap != null)
                 setImageRotateBitmap(rotateBitmap);
+        }
+    }
+
+    public void rotate(Context context) {
+        if (!TextUtils.isEmpty(mOriginPath)) {
+            mRotateDegree += 90;
+            if (mRotateDegree >= 360) mRotateDegree = 0;
+            
+            mSampleSize = CropUtil.calculateBitmapSampleSize(context, mOriginPath);
+            BitmapFactory.Options option = new BitmapFactory.Options();
+            option.inSampleSize = mSampleSize;
+            RotateBitmap rotateBitmap = new RotateBitmap(BitmapFactory.decodeFile(mOriginPath, option)
+                    , CropUtil.getExifRotation(mOriginPath) + mRotateDegree);
+            if (rotateBitmap != null) setImageRotateBitmap(rotateBitmap);
         }
     }
 
