@@ -124,7 +124,7 @@ public class CropView extends ImageView implements ViewTreeObserver.OnGlobalLayo
         if (!TextUtils.isEmpty(mOriginPath)) {
             mRotateDegree += 90;
             if (mRotateDegree >= 360) mRotateDegree = 0;
-            
+
             mSampleSize = CropUtil.calculateBitmapSampleSize(context, mOriginPath);
             BitmapFactory.Options option = new BitmapFactory.Options();
             option.inSampleSize = mSampleSize;
@@ -133,7 +133,7 @@ public class CropView extends ImageView implements ViewTreeObserver.OnGlobalLayo
             if (rotateBitmap != null) setImageRotateBitmap(rotateBitmap);
         }
     }
-
+    
     /**
      * 获取裁剪框内Bitmap
      */

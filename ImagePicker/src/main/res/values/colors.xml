@@ -14,4 +14,10 @@
     <color name="imagepicker_preview_enable">@color/imagepicker_text_white</color>
     <color name="imagepicker_preview_unenable">#9d9d9d</color>
 
+    <color name="imagepicker_type_select">#212121</color>
+    <color name="imagepicker_type_cancel">#757575</color>
+    <color name="imagepicker_type_line">#e0e0e0</color>
+    <color name="imagepicker_type_bg">#ffffff</color>
+    <color name="imagepicker_type_window">#42000000</color>
+
 </resources>

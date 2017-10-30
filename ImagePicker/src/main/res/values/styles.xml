@@ -26,4 +26,23 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="TypeBtnStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/imagepicker_type_item_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/imagepicker_type_item_textsize</item>
+        <item name="android:textColor">@color/imagepicker_type_select</item>
+    </style>
+    <!-- 弹窗样式 -->
+    <style name="TypeDialogStyle">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/imagepicker_type_window</item>
+        <!--<item name="android:windowAnimationStyle">@style/TypeDialogAnimation</item>-->
+    </style>
+    <!--<style name="TypeDialogAnimation" parent="android:Animation.Dialog">-->
+    <!--<item name="android:windowEnterAnimation">@anim/imagepicker_pop_slide_in</item>-->
+    <!--<item name="android:windowExitAnimation">@anim/imagepicker_pop_slide_out</item>-->
+    <!--</style>-->
+
 </resources>

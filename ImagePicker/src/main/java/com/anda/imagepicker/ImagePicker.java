@@ -24,6 +24,10 @@ public class ImagePicker {
         mOptions = new ImagePickerOptions();
     }
 
+    public ImagePickerOptions getOptions() {
+        return mOptions;
+    }
+
     public ImagePicker pickType(ImagePickType mode) {
         mOptions.setType(mode);
         return this;

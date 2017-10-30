@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        style="@style/TypeBtnStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/imagepicker_type_margin"
+        android:background="@drawable/imagepicker_type_bg"
+        android:text="@string/imagepicker_type_cancel"
+        android:textColor="@color/imagepicker_type_cancel"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_cancel"
+        android:layout_marginLeft="@dimen/imagepicker_type_margin"
+        android:layout_marginRight="@dimen/imagepicker_type_margin"
+        android:background="@drawable/imagepicker_type_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_select_camera"
+            style="@style/TypeBtnStyle"
+            android:text="@string/imagepicker_type_select_camera"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/imagepicker_type_line_height"
+            android:background="@color/imagepicker_type_line"/>
+
+        <TextView
+            android:id="@+id/tv_select_photo"
+            style="@style/TypeBtnStyle"
+            android:text="@string/imagepicker_type_select_photo"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

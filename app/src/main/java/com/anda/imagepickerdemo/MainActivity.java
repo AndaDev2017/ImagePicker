@@ -15,6 +15,7 @@ import com.anda.imagepicker.ImagePicker;
 import com.anda.imagepicker.data.ImageBean;
 import com.anda.imagepicker.data.ImagePickType;
 import com.anda.imagepicker.data.ImagePickerCropParams;
+import com.anda.imagepicker.ui.type.ImageTypeDialog;
 import com.anda.imagepicker.utils.GlideImagePickerDisplayer;
 
 import java.util.List;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         findViewById(com.anda.imagepickerdemo.R.id.btn_main_start).setOnClickListener(this);
+        findViewById(com.anda.imagepickerdemo.R.id.btn_main_type).setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +93,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .doCrop(getCropParams())//裁剪功能需要调用这个方法，多选模式下无效
                         .displayer(new GlideImagePickerDisplayer())//自定义图片加载器，默认是Glide实现的,可自定义图片加载器
                         .start(this, REQUEST_CODE);
+                break;
+            case com.anda.imagepickerdemo.R.id.btn_main_type:
+                new ImageTypeDialog(this,
+                        new ImagePicker()
+                                .pickType(getPickType())//设置选取类型(拍照、单选、多选)
+                                .maxNum(getMaxNum())//设置最大选择数量(拍照和单选都是1，修改后也无效)
+                                .needCamera(mCkNeedCamera.isChecked())//是否需要在界面中显示相机入口(类似微信)
+                                .cachePath(cachePath)//自定义缓存路径
+                                .doCrop(getCropParams())//裁剪功能需要调用这个方法，多选模式下无效
+                                .displayer(new GlideImagePickerDisplayer()),//自定义图片加载器，默认是Glide实现的,可自定义图片加载器
+                        REQUEST_CODE
+                ).show();
+                // 或使用：new ImageTypeDialog(this, REQUEST_CODE).show();
                 break;
         }
     }
