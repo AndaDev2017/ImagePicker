@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:id="@+id/activity_image_data"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_image_data"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/imagepicker_statusbar"
+    android:background="@color/imagepicker_background"
     android:fitsSystemWindows="true"
     tools:context="com.anda.imagepicker.ui.grid.view.ImageDataActivity">
 

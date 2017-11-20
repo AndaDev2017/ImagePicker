@@ -25,9 +25,14 @@ public class ImageTypeDialog extends Dialog implements View.OnClickListener {
     }
 
     public ImageTypeDialog(@NonNull Context context, ImagePicker imagePicker, int requestCode) {
+        this(context, imagePicker, requestCode, false);
+    }
+
+    public ImageTypeDialog(@NonNull Context context, ImagePicker imagePicker, int requestCode, boolean needCamera) {
         super(context, R.style.TypeDialogStyle);
         mContext = context;
         mImagePicker = imagePicker != null ? imagePicker : new ImagePicker();
+        mImagePicker.getOptions().setNeedCamera(needCamera);
         mRequestCode = requestCode;
         initUI(context);
     }

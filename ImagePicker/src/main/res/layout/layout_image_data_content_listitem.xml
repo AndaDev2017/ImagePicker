@@ -12,8 +12,8 @@
 
     <View
         android:id="@+id/ck_imagepicker_grid_content"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/imagepicker_data_select_iconsize"
+        android:layout_height="@dimen/imagepicker_data_select_iconsize"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="top|right"

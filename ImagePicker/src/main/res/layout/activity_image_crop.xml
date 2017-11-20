@@ -10,6 +10,15 @@
     android:orientation="vertical"
     tools:context="com.anda.imagepicker.ui.crop.ImageCropActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/imagepicker_actionbar_height"
+        android:background="@color/imagepicker_actionbar"
+        android:gravity="center"
+        android:text="@string/imagepicker_title_crop_image"
+        android:textColor="@color/imagepicker_text_white"
+        android:textSize="@dimen/imagepicker_title_size"/>
+
     <com.anda.imagepicker.widget.crop.CropView
         android:id="@+id/cv_crop"
         android:layout_width="match_parent"

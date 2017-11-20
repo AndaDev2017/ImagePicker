@@ -34,7 +34,8 @@
         android:gravity="center"
         android:paddingLeft="@dimen/imagepicker_padding"
         android:paddingRight="@dimen/imagepicker_padding"
-        android:text="@string/imagepicker_back"
         android:textColor="@color/imagepicker_text_white"
         android:textSize="@dimen/imagepicker_text_size"/>
+    <!--android:text="@string/imagepicker_back"-->
+
 </FrameLayout>
